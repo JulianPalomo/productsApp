@@ -1,0 +1,17 @@
+.student-list{
+    width: 80%;
+    margin: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 8px;
+}

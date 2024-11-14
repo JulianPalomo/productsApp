@@ -1,0 +1,31 @@
+<main>
+    <section class="student-list">
+        <h2>Students List</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>View Detail</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let product of products">
+                    <td>{{ product.productId }}</td>
+                    <td>{{ product.name }}</td>
+                    <td>{{ product.description }}</td>
+                    <td>{{ product.productCategoryId }}</td>
+                    <td>{{ product.price }}</td>
+                    <td><a [routerLink]="['/product-detail/', product.productId ]">Detail</a></td>
+                    <td>
+                        <button (click)="deleteProduct(product.productId)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</main>
